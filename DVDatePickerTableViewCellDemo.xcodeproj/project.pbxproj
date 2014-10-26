@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B31516AC19FC6AED00292FFA /* DVDatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31516AB19FC6AED00292FFA /* DVDatePickerTableViewCell.swift */; };
+		B31516B419FC6FBD00292FFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31516AE19FC6FBD00292FFA /* AppDelegate.swift */; };
+		B31516B519FC6FBD00292FFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31516AF19FC6FBD00292FFA /* LaunchScreen.xib */; };
+		B31516B619FC6FBD00292FFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B31516B119FC6FBD00292FFA /* Images.xcassets */; };
+		B31516B819FC6FBD00292FFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31516B319FC6FBD00292FFA /* ViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B315168619FC6ADB00292FFA /* DVDatePickerTableViewCellDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DVDatePickerTableViewCellDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31516AB19FC6AED00292FFA /* DVDatePickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		B31516AE19FC6FBD00292FFA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B31516B019FC6FBD00292FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B31516B119FC6FBD00292FFA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B31516B219FC6FBD00292FFA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B31516B319FC6FBD00292FFA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B315168319FC6ADB00292FFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B315167D19FC6ADB00292FFA = {
+			isa = PBXGroup;
+			children = (
+				B31516AB19FC6AED00292FFA /* DVDatePickerTableViewCell.swift */,
+				B31516AD19FC6FBD00292FFA /* DVDatePickerTableViewCellDemo */,
+				B315168719FC6ADB00292FFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B315168719FC6ADB00292FFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B315168619FC6ADB00292FFA /* DVDatePickerTableViewCellDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B31516AD19FC6FBD00292FFA /* DVDatePickerTableViewCellDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B31516AE19FC6FBD00292FFA /* AppDelegate.swift */,
+				B31516AF19FC6FBD00292FFA /* LaunchScreen.xib */,
+				B31516B119FC6FBD00292FFA /* Images.xcassets */,
+				B31516B219FC6FBD00292FFA /* Info.plist */,
+				B31516B319FC6FBD00292FFA /* ViewController.swift */,
+			);
+			path = DVDatePickerTableViewCellDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B315168519FC6ADB00292FFA /* DVDatePickerTableViewCellDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B31516A519FC6ADB00292FFA /* Build configuration list for PBXNativeTarget "DVDatePickerTableViewCellDemo" */;
+			buildPhases = (
+				B315168219FC6ADB00292FFA /* Sources */,
+				B315168319FC6ADB00292FFA /* Frameworks */,
+				B315168419FC6ADB00292FFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DVDatePickerTableViewCellDemo;
+			productName = SegFault11;
+			productReference = B315168619FC6ADB00292FFA /* DVDatePickerTableViewCellDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B315167E19FC6ADB00292FFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Dylan Vann";
+				TargetAttributes = {
+					B315168519FC6ADB00292FFA = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = B315168119FC6ADB00292FFA /* Build configuration list for PBXProject "DVDatePickerTableViewCellDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B315167D19FC6ADB00292FFA;
+			productRefGroup = B315168719FC6ADB00292FFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B315168519FC6ADB00292FFA /* DVDatePickerTableViewCellDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B315168419FC6ADB00292FFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B31516B619FC6FBD00292FFA /* Images.xcassets in Resources */,
+				B31516B519FC6FBD00292FFA /* LaunchScreen.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B315168219FC6ADB00292FFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B31516B819FC6FBD00292FFA /* ViewController.swift in Sources */,
+				B31516B419FC6FBD00292FFA /* AppDelegate.swift in Sources */,
+				B31516AC19FC6AED00292FFA /* DVDatePickerTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B31516AF19FC6FBD00292FFA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B31516B019FC6FBD00292FFA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B31516A319FC6ADB00292FFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B31516A419FC6ADB00292FFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B31516A619FC6ADB00292FFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DVDatePickerTableViewCellDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = DVDatePickerTableViewCellDemo;
+			};
+			name = Debug;
+		};
+		B31516A719FC6ADB00292FFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DVDatePickerTableViewCellDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = DVDatePickerTableViewCellDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B315168119FC6ADB00292FFA /* Build configuration list for PBXProject "DVDatePickerTableViewCellDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B31516A319FC6ADB00292FFA /* Debug */,
+				B31516A419FC6ADB00292FFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B31516A519FC6ADB00292FFA /* Build configuration list for PBXNativeTarget "DVDatePickerTableViewCellDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B31516A619FC6ADB00292FFA /* Debug */,
+				B31516A719FC6ADB00292FFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B315167E19FC6ADB00292FFA /* Project object */;
+}
