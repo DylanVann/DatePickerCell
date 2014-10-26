@@ -1,5 +1,7 @@
 #DVDatePickerTableViewCell
 
+<p align="center"><img src="http://i.imgur.com/dpHIzw8.gif"/></p>
+
 Inline/Expanding date picker for table views.
 
 ##Usage
