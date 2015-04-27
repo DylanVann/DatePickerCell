@@ -61,7 +61,11 @@ class DVDatePickerTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+                
+        setup()
+    }
+    
+    private func setup() {
         // The datePicker overhangs the view slightly to avoid invalid constraints.
         self.clipsToBounds = true
         
@@ -264,6 +268,8 @@ class DVDatePickerTableViewCell: UITableViewCell {
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
+        setup()
     }
     
     func datePickerHeight() -> CGFloat {
