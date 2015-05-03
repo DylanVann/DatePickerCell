@@ -257,13 +257,8 @@ class DVDatePickerTableViewCell: UITableViewCell {
             ])
         
         datePicker.addTarget(self, action: "datePicked", forControlEvents: UIControlEvents.ValueChanged)
-        setDate(NSDate())
+        self.date = NSDate()
         leftLabel.text = "Date Picker"
-    }
-    
-    // didSet isn't called within init. Use this.
-    func setDate(date: NSDate) {
-        self.date = date
     }
     
     required init(coder aDecoder: NSCoder) {
