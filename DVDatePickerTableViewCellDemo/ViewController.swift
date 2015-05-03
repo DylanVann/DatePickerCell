@@ -25,7 +25,7 @@ class ViewController: UITableViewController {
         
         var cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)
         if (cell.isKindOfClass(DVDatePickerTableViewCell)) {
-            return (cell as DVDatePickerTableViewCell).datePickerHeight()
+            return (cell as! DVDatePickerTableViewCell).datePickerHeight()
         }
         
         return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
@@ -41,14 +41,14 @@ class ViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return cells[indexPath.section][indexPath.row] as UITableViewCell
+        return cells[indexPath.section][indexPath.row] as! UITableViewCell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         var cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)
         if (cell.isKindOfClass(DVDatePickerTableViewCell)) {
-            var datePickerTableViewCell = cell as DVDatePickerTableViewCell
+            var datePickerTableViewCell = cell as! DVDatePickerTableViewCell
             datePickerTableViewCell.selectedInTableView(tableView)
         }
         
