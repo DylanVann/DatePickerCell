@@ -18,14 +18,14 @@ class ViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 44
         
         // Cells is a 2D array containing sections and rows.
-        cells = [[DVDatePickerTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)]]
+        cells = [[DatePickerCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)]]
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
         var cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)
-        if (cell.isKindOfClass(DVDatePickerTableViewCell)) {
-            return (cell as! DVDatePickerTableViewCell).datePickerHeight()
+        if (cell.isKindOfClass(DatePickerCell)) {
+            return (cell as! DatePickerCell).datePickerHeight()
         }
         
         return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
@@ -47,8 +47,8 @@ class ViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         var cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)
-        if (cell.isKindOfClass(DVDatePickerTableViewCell)) {
-            var datePickerTableViewCell = cell as! DVDatePickerTableViewCell
+        if (cell.isKindOfClass(DatePickerCell)) {
+            var datePickerTableViewCell = cell as! DatePickerCell
             datePickerTableViewCell.selectedInTableView(tableView)
         }
         

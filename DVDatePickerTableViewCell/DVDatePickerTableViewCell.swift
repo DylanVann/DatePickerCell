@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DVDatePickerTableViewCell: UITableViewCell {
+public class DatePickerCell: UITableViewCell {
     
     class DVColorLockView:UIView {
         
@@ -29,7 +29,6 @@ class DVDatePickerTableViewCell: UITableViewCell {
                 return super.backgroundColor
             }
         }
-        
     }
     
     // Class variable workaround.
@@ -37,30 +36,32 @@ class DVDatePickerTableViewCell: UITableViewCell {
         static var dateFormatter = NSDateFormatter()
     }
     
-    var date:NSDate = NSDate() {
+    public var date:NSDate = NSDate() {
         didSet {
             datePicker.date = date
-            DVDatePickerTableViewCell.Stored.dateFormatter.dateStyle = dateStyle
-            DVDatePickerTableViewCell.Stored.dateFormatter.timeStyle = timeStyle
-            rightLabel.text = DVDatePickerTableViewCell.Stored.dateFormatter.stringFromDate(date)
+            DatePickerCell.Stored.dateFormatter.dateStyle = dateStyle
+            DatePickerCell.Stored.dateFormatter.timeStyle = timeStyle
+            rightLabel.text = DatePickerCell.Stored.dateFormatter.stringFromDate(date)
         }
     }
-    var timeStyle = NSDateFormatterStyle.ShortStyle, dateStyle = NSDateFormatterStyle.ShortStyle
+    public var timeStyle = NSDateFormatterStyle.ShortStyle
+    public var dateStyle = NSDateFormatterStyle.MediumStyle
     
-    var leftLabel = UILabel(), rightLabel = UILabel()
-    var rightLabelTextColor = UIColor(hue: 0.639, saturation: 0.041, brightness: 0.576, alpha: 1.0) //Color of normal detail label.
+    public var leftLabel = UILabel()
+    public var rightLabel = UILabel()
+    public var rightLabelTextColor = UIColor(hue: 0.639, saturation: 0.041, brightness: 0.576, alpha: 1.0) //Color of normal detail label.
     
     var seperator = DVColorLockView()
     
     var datePickerContainer = UIView()
-    var datePicker: UIDatePicker = UIDatePicker()
+    public var datePicker: UIDatePicker = UIDatePicker()
     
-    var expanded = false
+    public var expanded = false
     var unexpandedHeight = CGFloat(44)
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-                
+        
         setup()
     }
     
@@ -256,29 +257,28 @@ class DVDatePickerTableViewCell: UITableViewCell {
             ])
         
         datePicker.addTarget(self, action: "datePicked", forControlEvents: UIControlEvents.ValueChanged)
-        
         let timeIntervalSinceReferenceDateWithoutSeconds = floor(date.timeIntervalSinceReferenceDate / 60.0) * 60.0 // Clear the seconds (":00")
         self.date = NSDate(timeIntervalSinceReferenceDate: timeIntervalSinceReferenceDateWithoutSeconds)
         leftLabel.text = "Date Picker"
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         setup()
     }
     
-    func datePickerHeight() -> CGFloat {
+    public func datePickerHeight() -> CGFloat {
         var expandedHeight = unexpandedHeight + CGFloat(datePicker.frame.size.height)
         return expanded ? expandedHeight : unexpandedHeight
     }
     
-    func selectedInTableView(tableView: UITableView) {
+    public func selectedInTableView(tableView: UITableView) {
         expanded = !expanded
         
         UIView.transitionWithView(rightLabel, duration: 0.25, options:UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
-                self.rightLabel.textColor = self.expanded ? self.tintColor : self.rightLabelTextColor
-        }, completion: nil)
+            self.rightLabel.textColor = self.expanded ? self.tintColor : self.rightLabelTextColor
+            }, completion: nil)
         
         tableView.beginUpdates()
         tableView.endUpdates()
