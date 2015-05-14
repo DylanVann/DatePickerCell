@@ -11,7 +11,7 @@
 		B31516B519FC6FBD00292FFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31516AF19FC6FBD00292FFA /* LaunchScreen.xib */; };
 		B31516B619FC6FBD00292FFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B31516B119FC6FBD00292FFA /* Images.xcassets */; };
 		B31516B819FC6FBD00292FFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31516B319FC6FBD00292FFA /* ViewController.swift */; };
-		B3686F131AF67A3C00BECFA7 /* DVDatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3686F121AF67A3C00BECFA7 /* DVDatePickerTableViewCell.swift */; };
+		B3686F131AF67A3C00BECFA7 /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3686F121AF67A3C00BECFA7 /* DatePickerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +21,7 @@
 		B31516B119FC6FBD00292FFA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B31516B219FC6FBD00292FFA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B31516B319FC6FBD00292FFA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B3686F121AF67A3C00BECFA7 /* DVDatePickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		B3686F121AF67A3C00BECFA7 /* DatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 		B3686F111AF67A3C00BECFA7 /* DVDatePickerTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				B3686F121AF67A3C00BECFA7 /* DVDatePickerTableViewCell.swift */,
+				B3686F121AF67A3C00BECFA7 /* DatePickerCell.swift */,
 			);
 			path = DVDatePickerTableViewCell;
 			sourceTree = "<group>";
@@ -143,7 +143,7 @@
 			files = (
 				B31516B819FC6FBD00292FFA /* ViewController.swift in Sources */,
 				B31516B419FC6FBD00292FFA /* AppDelegate.swift in Sources */,
-				B3686F131AF67A3C00BECFA7 /* DVDatePickerTableViewCell.swift in Sources */,
+				B3686F131AF67A3C00BECFA7 /* DatePickerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
