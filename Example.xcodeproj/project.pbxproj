@@ -11,17 +11,17 @@
 		B31516B519FC6FBD00292FFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31516AF19FC6FBD00292FFA /* LaunchScreen.xib */; };
 		B31516B619FC6FBD00292FFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B31516B119FC6FBD00292FFA /* Images.xcassets */; };
 		B31516B819FC6FBD00292FFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31516B319FC6FBD00292FFA /* ViewController.swift */; };
-		B3686F131AF67A3C00BECFA7 /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3686F121AF67A3C00BECFA7 /* DatePickerCell.swift */; };
+		B31979AD1B063B88006F4BD1 /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31979AC1B063B88006F4BD1 /* DatePickerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B315168619FC6ADB00292FFA /* DVDatePickerTableViewCellDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DVDatePickerTableViewCellDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B315168619FC6ADB00292FFA /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31516AE19FC6FBD00292FFA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B31516B019FC6FBD00292FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B31516B119FC6FBD00292FFA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B31516B219FC6FBD00292FFA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B31516B319FC6FBD00292FFA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B3686F121AF67A3C00BECFA7 /* DatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
+		B31979AC1B063B88006F4BD1 /* DatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatePickerCell.swift; path = Source/DatePickerCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,8 +38,8 @@
 		B315167D19FC6ADB00292FFA = {
 			isa = PBXGroup;
 			children = (
-				B3686F111AF67A3C00BECFA7 /* DVDatePickerTableViewCell */,
-				B31516AD19FC6FBD00292FFA /* DVDatePickerTableViewCellDemo */,
+				B3686F111AF67A3C00BECFA7 /* Source */,
+				B31516AD19FC6FBD00292FFA /* Example */,
 				B315168719FC6ADB00292FFA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,12 +47,12 @@
 		B315168719FC6ADB00292FFA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B315168619FC6ADB00292FFA /* DVDatePickerTableViewCellDemo.app */,
+				B315168619FC6ADB00292FFA /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B31516AD19FC6FBD00292FFA /* DVDatePickerTableViewCellDemo */ = {
+		B31516AD19FC6FBD00292FFA /* Example */ = {
 			isa = PBXGroup;
 			children = (
 				B31516AE19FC6FBD00292FFA /* AppDelegate.swift */,
@@ -61,23 +61,24 @@
 				B31516B219FC6FBD00292FFA /* Info.plist */,
 				B31516B319FC6FBD00292FFA /* ViewController.swift */,
 			);
-			path = DVDatePickerTableViewCellDemo;
+			path = Example;
 			sourceTree = "<group>";
 		};
-		B3686F111AF67A3C00BECFA7 /* DVDatePickerTableViewCell */ = {
+		B3686F111AF67A3C00BECFA7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				B3686F121AF67A3C00BECFA7 /* DatePickerCell.swift */,
+				B31979AC1B063B88006F4BD1 /* DatePickerCell.swift */,
 			);
+			name = Source;
 			path = DVDatePickerTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B315168519FC6ADB00292FFA /* DVDatePickerTableViewCellDemo */ = {
+		B315168519FC6ADB00292FFA /* Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B31516A519FC6ADB00292FFA /* Build configuration list for PBXNativeTarget "DVDatePickerTableViewCellDemo" */;
+			buildConfigurationList = B31516A519FC6ADB00292FFA /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
 				B315168219FC6ADB00292FFA /* Sources */,
 				B315168319FC6ADB00292FFA /* Frameworks */,
@@ -87,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = DVDatePickerTableViewCellDemo;
+			name = Example;
 			productName = SegFault11;
-			productReference = B315168619FC6ADB00292FFA /* DVDatePickerTableViewCellDemo.app */;
+			productReference = B315168619FC6ADB00292FFA /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -106,7 +107,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B315168119FC6ADB00292FFA /* Build configuration list for PBXProject "DVDatePickerTableViewCellDemo" */;
+			buildConfigurationList = B315168119FC6ADB00292FFA /* Build configuration list for PBXProject "Example" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -119,7 +120,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B315168519FC6ADB00292FFA /* DVDatePickerTableViewCellDemo */,
+				B315168519FC6ADB00292FFA /* Example */,
 			);
 		};
 /* End PBXProject section */
@@ -143,7 +144,7 @@
 			files = (
 				B31516B819FC6FBD00292FFA /* ViewController.swift in Sources */,
 				B31516B419FC6FBD00292FFA /* AppDelegate.swift in Sources */,
-				B3686F131AF67A3C00BECFA7 /* DatePickerCell.swift in Sources */,
+				B31979AD1B063B88006F4BD1 /* DatePickerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +247,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DVDatePickerTableViewCellDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = DVDatePickerTableViewCellDemo;
+				PRODUCT_NAME = Example;
 			};
 			name = Debug;
 		};
@@ -256,14 +257,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DVDatePickerTableViewCellDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = DVDatePickerTableViewCellDemo;
+				PRODUCT_NAME = Example;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B315168119FC6ADB00292FFA /* Build configuration list for PBXProject "DVDatePickerTableViewCellDemo" */ = {
+		B315168119FC6ADB00292FFA /* Build configuration list for PBXProject "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B31516A319FC6ADB00292FFA /* Debug */,
@@ -272,7 +273,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B31516A519FC6ADB00292FFA /* Build configuration list for PBXNativeTarget "DVDatePickerTableViewCellDemo" */ = {
+		B31516A519FC6ADB00292FFA /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B31516A619FC6ADB00292FFA /* Debug */,
