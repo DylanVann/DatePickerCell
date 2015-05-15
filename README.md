@@ -1,4 +1,4 @@
-#DVDatePickerTableViewCell
+#DatePickerCell
 
 <p align="center">
 <img src="http://i.imgur.com/dpHIzw8.gif"/>
@@ -8,41 +8,76 @@
 
 Inline/Expanding date picker for table views.
 
+## Installation
+
+DatePickerCell is available through [CocoaPods](http://cocoapods.org). To install
+it, add it to your Podfile:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+pod 'DatePickerCell'
+```
+
 ##Usage
 
-You'll probably be using this in a static tableview. You can set it up like this in your TableViewController:
-
-###viewDidLoad
+An example of programmatically creating a tableview with one DatePickerCell.
 
 ```Swift
-var cell = DVDatePickerTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
-cell.leftLabel.text = "The label for the date picker."
-cell.datePicker // The datepicker. Add yourself as a target like you normally would, if required.
-cell.datePicker.addTarget(self, action: "datePicked:", forControlEvents: UIControlEvents.ValueChanged)
-cell.date // The date. Setting will update the picker view and label.
-// Add it to an array of cells or something.
-```
+import UIKit
+import DatePickerCell
 
-###didSelectRowAtIndexPath
+class ViewController: UITableViewController {
 
-```Swift
-override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-  var cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)
-  if (cell.isKindOfClass(DVDatePickerTableViewCell)) {
-    (cell as DVDatePickerTableViewCell).selectedInTableView(tableView)
-  }
-  self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    var cells:NSArray = []
+    
+    override func viewDidLoad() {
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 44
+        
+        // The DatePickerCell.
+        let datePickerCell = DatePickerCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
+        // Cells is a 2D array containing sections and rows.
+        cells = [[datePickerCell]]
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        // Get the correct height if the cell is a DatePickerCell.
+        var cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)
+        if (cell.isKindOfClass(DatePickerCell)) {
+            return (cell as! DatePickerCell).datePickerHeight()
+        }
+        
+        return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // Deselect automatically if the cell is a DatePickerCell.
+        var cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)
+        if (cell.isKindOfClass(DatePickerCell)) {
+            var datePickerTableViewCell = cell as! DatePickerCell
+            datePickerTableViewCell.selectedInTableView(tableView)
+            self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
+    }
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return cells.count
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cells[section].count
+    }
+    
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return cells[indexPath.section][indexPath.row] as! UITableViewCell
+    }
 }
 ```
 
-###heightForRowAtIndexPath 
+##Documentation
 
-```Swift
-override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-  var cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)
-  if (cell.isKindOfClass(DVDatePickerTableViewCell)) {
-    return (cell as DVDatePickerTableViewCell).datePickerHeight()
-  }
-  return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
-}
-```
+Documentation is on [CocoaDocs](http://cocoadocs.org/docsets/DatePickerCell).

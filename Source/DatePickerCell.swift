@@ -11,26 +11,6 @@ import UIKit
 
 public class DatePickerCell: UITableViewCell {
     
-    class DVColorLockView:UIView {
-        
-        var lockedBackgroundColor:UIColor {
-            set {
-                super.backgroundColor = newValue
-            }
-            get {
-                return super.backgroundColor!
-            }
-        }
-        
-        override var backgroundColor:UIColor? {
-            set {
-            }
-            get {
-                return super.backgroundColor
-            }
-        }
-    }
-    
     // Class variable workaround.
     struct Stored {
         static var dateFormatter = NSDateFormatter()
@@ -61,7 +41,7 @@ public class DatePickerCell: UITableViewCell {
     
     override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+                
         setup()
     }
     
@@ -257,7 +237,7 @@ public class DatePickerCell: UITableViewCell {
             ])
         
         datePicker.addTarget(self, action: "datePicked", forControlEvents: UIControlEvents.ValueChanged)
-        let timeIntervalSinceReferenceDateWithoutSeconds = floor(date.timeIntervalSinceReferenceDate / 60.0) * 60.0 // Clear the seconds (":00")
+        let timeIntervalSinceReferenceDateWithoutSeconds = floor(date.timeIntervalSinceReferenceDate / 60.0) * 60.0
         self.date = NSDate(timeIntervalSinceReferenceDate: timeIntervalSinceReferenceDateWithoutSeconds)
         leftLabel.text = "Date Picker"
     }
@@ -277,8 +257,8 @@ public class DatePickerCell: UITableViewCell {
         expanded = !expanded
         
         UIView.transitionWithView(rightLabel, duration: 0.25, options:UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
-            self.rightLabel.textColor = self.expanded ? self.tintColor : self.rightLabelTextColor
-            }, completion: nil)
+                self.rightLabel.textColor = self.expanded ? self.tintColor : self.rightLabelTextColor
+        }, completion: nil)
         
         tableView.beginUpdates()
         tableView.endUpdates()

@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  SegFault11
+//  Example
 //
-//  Created by Dylan Vann on 2014-10-25.
-//  Copyright (c) 2014 Dylan Vann. All rights reserved.
+//  Created by Dylan Vann on 2015-05-12.
+//  Copyright (c) 2015 Dylan Vann. All rights reserved.
 //
 
 import UIKit
@@ -16,9 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window?.rootViewController = ViewController(style: UITableViewStyle.Grouped)
-        window?.makeKeyAndVisible()
         return true
     }
 
