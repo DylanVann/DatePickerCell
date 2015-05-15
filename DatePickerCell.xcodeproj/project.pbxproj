@@ -10,8 +10,6 @@
 		B327253D1B02F87F00F7F3B4 /* DatePickerCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32725311B02F87F00F7F3B4 /* DatePickerCell.framework */; };
 		B32725551B02FA5600F7F3B4 /* DatePickerCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32725531B02FA5600F7F3B4 /* DatePickerCellTests.swift */; };
 		B32725681B0328AF00F7F3B4 /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32725671B0328AF00F7F3B4 /* DatePickerCell.swift */; };
-		B327256B1B0328E900F7F3B4 /* ColorLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B327256A1B0328E900F7F3B4 /* ColorLockView.swift */; };
-		B327256C1B0328E900F7F3B4 /* ColorLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B327256A1B0328E900F7F3B4 /* ColorLockView.swift */; };
 		B32725731B03302E00F7F3B4 /* DatePickerCell.h in Headers */ = {isa = PBXBuildFile; fileRef = B327254E1B02FA4400F7F3B4 /* DatePickerCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -36,7 +34,6 @@
 		B327255B1B03023500F7F3B4 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B327255C1B03023500F7F3B4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B32725671B0328AF00F7F3B4 /* DatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
-		B327256A1B0328E900F7F3B4 /* ColorLockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorLockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +79,6 @@
 			children = (
 				B327254E1B02FA4400F7F3B4 /* DatePickerCell.h */,
 				B32725671B0328AF00F7F3B4 /* DatePickerCell.swift */,
-				B327256A1B0328E900F7F3B4 /* ColorLockView.swift */,
 				B32725571B02FAC700F7F3B4 /* Supporting Files */,
 			);
 			path = Source;
@@ -231,7 +227,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B32725681B0328AF00F7F3B4 /* DatePickerCell.swift in Sources */,
-				B327256B1B0328E900F7F3B4 /* ColorLockView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +235,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B32725551B02FA5600F7F3B4 /* DatePickerCellTests.swift in Sources */,
-				B327256C1B0328E900F7F3B4 /* ColorLockView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

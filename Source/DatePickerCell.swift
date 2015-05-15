@@ -11,6 +11,26 @@ import UIKit
 
 public class DatePickerCell: UITableViewCell {
     
+    class DVColorLockView:UIView {
+        
+        var lockedBackgroundColor:UIColor {
+            set {
+                super.backgroundColor = newValue
+            }
+            get {
+                return super.backgroundColor!
+            }
+        }
+        
+        override var backgroundColor:UIColor? {
+            set {
+            }
+            get {
+                return super.backgroundColor
+            }
+        }
+    }
+    
     // Class variable workaround.
     struct Stored {
         static var dateFormatter = NSDateFormatter()
