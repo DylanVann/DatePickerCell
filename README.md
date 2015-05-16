@@ -25,7 +25,7 @@ pod 'DatePickerCell'
 
 An example of programmatically creating a tableview with one DatePickerCell.
 
-```Swift
+```swift
 import UIKit
 import DatePickerCell
 
