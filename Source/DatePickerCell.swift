@@ -9,8 +9,14 @@
 import Foundation
 import UIKit
 
+/**
+*  Inline/Expanding date picker for table views.
+*/
 public class DatePickerCell: UITableViewCell {
     
+    /**
+    *  UIView subclass. Used as a subview in UITableViewCells. Does not change color when the UITableViewCell is selected.
+    */
     class DVColorLockView:UIView {
         
         var lockedBackgroundColor:UIColor {
@@ -36,6 +42,7 @@ public class DatePickerCell: UITableViewCell {
         static var dateFormatter = NSDateFormatter()
     }
     
+    /// The selected date, set to current date/time on initialization.
     public var date:NSDate = NSDate() {
         didSet {
             datePicker.date = date
@@ -44,21 +51,36 @@ public class DatePickerCell: UITableViewCell {
             rightLabel.text = DatePickerCell.Stored.dateFormatter.stringFromDate(date)
         }
     }
+    /// The timestyle.
     public var timeStyle = NSDateFormatterStyle.ShortStyle
+    /// The datestyle.
     public var dateStyle = NSDateFormatterStyle.MediumStyle
     
+    /// Label on the left side of the cell.
     public var leftLabel = UILabel()
+    /// Label on the right side of the cell.
     public var rightLabel = UILabel()
+    /// Default color of the right label.
     public var rightLabelTextColor = UIColor(hue: 0.639, saturation: 0.041, brightness: 0.576, alpha: 1.0) //Color of normal detail label.
     
     var seperator = DVColorLockView()
     
     var datePickerContainer = UIView()
+    /// The datepicker embeded in the cell.
     public var datePicker: UIDatePicker = UIDatePicker()
     
+    /// Is the cell expanded?
     public var expanded = false
     var unexpandedHeight = CGFloat(44)
     
+    /**
+    Creates the DatePickerCell
+    
+    :param: style           A constant indicating a cell style. See UITableViewCellStyle for descriptions of these constants.
+    :param: reuseIdentifier A string used to identify the cell object if it is to be reused for drawing multiple rows of a table view. Pass nil if the cell object is not to be reused. You should use the same reuse identifier for all cells of the same form.
+    
+    :returns: An initialized DatePickerCell object or nil if the object could not be created.
+    */
     override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
                 
@@ -268,11 +290,21 @@ public class DatePickerCell: UITableViewCell {
         setup()
     }
     
+    /**
+    Determines the current desired height of the cell. Used in the UITableViewDelegate's heightForRowAtIndexPath method.
+    
+    :returns: The cell's height.
+    */
     public func datePickerHeight() -> CGFloat {
         var expandedHeight = unexpandedHeight + CGFloat(datePicker.frame.size.height)
         return expanded ? expandedHeight : unexpandedHeight
     }
     
+    /**
+    Used to notify the DatePickerCell that it was selected. The DatePickerCell will then run its selection animation and expand or collapse.
+    
+    :param: tableView The tableview the DatePickerCell was selected in.
+    */
     public func selectedInTableView(tableView: UITableView) {
         expanded = !expanded
         
