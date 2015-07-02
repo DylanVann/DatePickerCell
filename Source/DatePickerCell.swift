@@ -145,7 +145,7 @@ public class DatePickerCell: UITableViewCell {
         
         rightLabel.textColor = rightLabelTextColor
         
-        //Left label.
+        // Left label.
         self.contentView.addConstraints([
             NSLayoutConstraint(
                 item: leftLabel,
@@ -176,7 +176,7 @@ public class DatePickerCell: UITableViewCell {
             ),
             ])
         
-        //Right label
+        // Right label
         self.contentView.addConstraints([
             NSLayoutConstraint(
                 item: rightLabel,
@@ -321,6 +321,7 @@ public class DatePickerCell: UITableViewCell {
         tableView.endUpdates()
     }
     
+    // Action for the datePicker ValueChanged event.
     func datePicked() {
         date = datePicker.date
     }
