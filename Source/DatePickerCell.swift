@@ -284,9 +284,14 @@ public class DatePickerCell: UITableViewCell {
         leftLabel.text = "Date Picker"
     }
     
+    /**
+    Needed for initialization from a storyboard.
+
+    :param: aDecoder An unarchiver object.
+    :returns: An initialized DatePickerCell object or nil if the object could not be created.
+    */
     required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
         setup()
     }
     
