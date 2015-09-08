@@ -94,7 +94,7 @@ public class DatePickerCell: UITableViewCell {
         var views = [leftLabel, rightLabel, seperator, datePickerContainer, datePicker]
         for view in views {
             self.contentView .addSubview(view)
-            view.setTranslatesAutoresizingMaskIntoConstraints(false)
+            view.translatesAutoresizingMaskIntoConstraints = false
         }
         
         datePickerContainer.clipsToBounds = true
@@ -290,7 +290,7 @@ public class DatePickerCell: UITableViewCell {
     :param: aDecoder An unarchiver object.
     :returns: An initialized DatePickerCell object or nil if the object could not be created.
     */
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
