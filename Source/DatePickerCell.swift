@@ -91,7 +91,7 @@ public class DatePickerCell: UITableViewCell {
         // The datePicker overhangs the view slightly to avoid invalid constraints.
         self.clipsToBounds = true
         
-        var views = [leftLabel, rightLabel, seperator, datePickerContainer, datePicker]
+        let views = [leftLabel, rightLabel, seperator, datePickerContainer, datePicker]
         for view in views {
             self.contentView .addSubview(view)
             view.setTranslatesAutoresizingMaskIntoConstraints(false)
@@ -301,7 +301,7 @@ public class DatePickerCell: UITableViewCell {
     :returns: The cell's height.
     */
     public func datePickerHeight() -> CGFloat {
-        var expandedHeight = unexpandedHeight + CGFloat(datePicker.frame.size.height)
+        let expandedHeight = unexpandedHeight + CGFloat(datePicker.frame.size.height)
         return expanded ? expandedHeight : unexpandedHeight
     }
     
