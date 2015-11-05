@@ -37,18 +37,16 @@ public class DatePickerCell: UITableViewCell {
         }
     }
     
-    // Class variable workaround.
-    struct Stored {
-        static var dateFormatter = NSDateFormatter()
-    }
+    // Only create one NSDateFormatter to save resources.
+    static let dateFormatter = NSDateFormatter()
     
     /// The selected date, set to current date/time on initialization.
     public var date:NSDate = NSDate() {
         didSet {
             datePicker.date = date
-            DatePickerCell.Stored.dateFormatter.dateStyle = dateStyle
-            DatePickerCell.Stored.dateFormatter.timeStyle = timeStyle
-            rightLabel.text = DatePickerCell.Stored.dateFormatter.stringFromDate(date)
+            DatePickerCell.dateFormatter.dateStyle = dateStyle
+            DatePickerCell.dateFormatter.timeStyle = timeStyle
+            rightLabel.text = DatePickerCell.dateFormatter.stringFromDate(date)
         }
     }
     /// The timestyle.
