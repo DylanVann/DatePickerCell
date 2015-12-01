@@ -50,16 +50,30 @@ public class DatePickerCell: UITableViewCell {
         }
     }
     /// The timestyle.
-    public var timeStyle = NSDateFormatterStyle.ShortStyle
+    public var timeStyle = NSDateFormatterStyle.ShortStyle {
+        didSet {
+            DatePickerCell.dateFormatter.timeStyle = timeStyle
+            rightLabel.text = DatePickerCell.dateFormatter.stringFromDate(date)
+        }
+    }
     /// The datestyle.
-    public var dateStyle = NSDateFormatterStyle.MediumStyle
-    
+    public var dateStyle = NSDateFormatterStyle.MediumStyle {
+        didSet {
+            DatePickerCell.dateFormatter.dateStyle = dateStyle
+            rightLabel.text = DatePickerCell.dateFormatter.stringFromDate(date)
+        }
+    }
+
     /// Label on the left side of the cell.
     public var leftLabel = UILabel()
     /// Label on the right side of the cell.
     public var rightLabel = UILabel()
     /// Default color of the right label.
-    public var rightLabelTextColor = UIColor(hue: 0.639, saturation: 0.041, brightness: 0.576, alpha: 1.0) //Color of normal detail label.
+    public var rightLabelTextColor = UIColor(hue: 0.639, saturation: 0.041, brightness: 0.576, alpha: 1.0) { //Color of normal detail label.
+        didSet {
+            rightLabel.textColor = rightLabelTextColor
+        }
+    }
     
     var seperator = DVColorLockView()
     
