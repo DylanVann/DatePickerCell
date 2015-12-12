@@ -281,10 +281,10 @@ public class DatePickerCell: UITableViewCell {
             ),
             NSLayoutConstraint(
                 item: datePicker,
-                attribute: NSLayoutAttribute.CenterY,
+                attribute: NSLayoutAttribute.Top,
                 relatedBy: NSLayoutRelation.Equal,
                 toItem: datePickerContainer,
-                attribute: NSLayoutAttribute.CenterY,
+                attribute: NSLayoutAttribute.Top,
                 multiplier: 1.0,
                 constant: 0
             ),
