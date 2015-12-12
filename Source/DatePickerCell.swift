@@ -68,8 +68,8 @@ public class DatePickerCell: UITableViewCell {
     public var leftLabel = UILabel()
     /// Label on the right side of the cell.
     public var rightLabel = UILabel()
-    /// Default color of the right label.
-    public var rightLabelTextColor = UIColor(hue: 0.639, saturation: 0.041, brightness: 0.576, alpha: 1.0) { //Color of normal detail label.
+    /// Color of the right label. Default is the color of a normal detail label.
+    public var rightLabelTextColor = UIColor(hue: 0.639, saturation: 0.041, brightness: 0.576, alpha: 1.0) {
         didSet {
             rightLabel.textColor = rightLabelTextColor
         }
@@ -291,7 +291,8 @@ public class DatePickerCell: UITableViewCell {
             ])
         
         datePicker.addTarget(self, action: "datePicked", forControlEvents: UIControlEvents.ValueChanged)
-        let timeIntervalSinceReferenceDateWithoutSeconds = floor(date.timeIntervalSinceReferenceDate / 60.0) * 60.0 // Clear seconds.
+         // Clear seconds.
+        let timeIntervalSinceReferenceDateWithoutSeconds = floor(date.timeIntervalSinceReferenceDate / 60.0) * 60.0
         self.date = NSDate(timeIntervalSinceReferenceDate: timeIntervalSinceReferenceDateWithoutSeconds)
         leftLabel.text = "Date Picker"
     }
