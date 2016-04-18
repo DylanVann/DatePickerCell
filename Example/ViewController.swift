@@ -26,8 +26,8 @@ class ViewController: UITableViewController {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         // Get the correct height if the cell is a DatePickerCell.
         let cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)
-        if (cell.isKindOfClass(DatePickerCell)) {
-            return (cell as! DatePickerCell).datePickerHeight()
+        if let datePickerCell = cell as? DatePickerCell {
+            return datePickerCell.datePickerHeight()
         }
         
         return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
@@ -36,9 +36,8 @@ class ViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // Deselect automatically if the cell is a DatePickerCell.
         let cell = self.tableView(tableView, cellForRowAtIndexPath: indexPath)
-        if (cell.isKindOfClass(DatePickerCell)) {
-            let datePickerTableViewCell = cell as! DatePickerCell
-            datePickerTableViewCell.selectedInTableView(tableView)
+        if let datePickerCell = cell as? DatePickerCell {
+            datePickerCell.selectedInTableView(tableView)
             self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
     }
