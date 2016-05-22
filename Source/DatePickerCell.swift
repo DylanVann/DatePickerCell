@@ -12,11 +12,23 @@ import UIKit
 /**
 *  Inline/Expanding date picker for table views.
 */
+
+/**
+ *  Optional protocol called when date is picked
+ */
+@objc public protocol DatePickerCellDelegate {
+    optional func datePickerCell(cell: DatePickerCell, didPickDate date: NSDate?)
+}
+
 public class DatePickerCell: UITableViewCell {
     
     /**
     *  UIView subclass. Used as a subview in UITableViewCells. Does not change color when the UITableViewCell is selected.
     */
+    
+    // delegate
+    public var delegate: DatePickerCellDelegate?
+    
     class DVColorLockView:UIView {
         
         var lockedBackgroundColor:UIColor {
@@ -337,5 +349,7 @@ public class DatePickerCell: UITableViewCell {
     // Action for the datePicker ValueChanged event.
     func datePicked() {
         date = datePicker.date
+        // date picked, call delegate method
+        self.delegate?.datePickerCell?(self, didPickDate: date)
     }
 }
