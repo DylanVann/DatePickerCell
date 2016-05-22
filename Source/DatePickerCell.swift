@@ -302,7 +302,7 @@ public class DatePickerCell: UITableViewCell {
             ),
             ])
         
-        datePicker.addTarget(self, action: "datePicked", forControlEvents: UIControlEvents.ValueChanged)
+        datePicker.addTarget(self, action: #selector(DatePickerCell.datePicked), forControlEvents: UIControlEvents.ValueChanged)
          // Clear seconds.
         let timeIntervalSinceReferenceDateWithoutSeconds = floor(date.timeIntervalSinceReferenceDate / 60.0) * 60.0
         self.date = NSDate(timeIntervalSinceReferenceDate: timeIntervalSinceReferenceDateWithoutSeconds)
