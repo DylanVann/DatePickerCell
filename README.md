@@ -1,12 +1,12 @@
-#DatePickerCell
+# DatePickerCell
+
+📅 Inline/Expanding date picker for table views.
 
 <p align="center">
-<img src="http://i.imgur.com/dpHIzw8.gif"/>
-<br>
-[slow motion]
+    <img src="http://i.imgur.com/dpHIzw8.gif"/>
+    <br>
+    [slow motion]
 </p>
-
-Inline/Expanding date picker for table views.
 
 ## Installation
 
@@ -21,7 +21,7 @@ use_frameworks!
 pod 'DatePickerCell'
 ```
 
-##Usage
+## Usage
 
 An example of programmatically creating a tableview with one DatePickerCell.
 
@@ -78,6 +78,6 @@ class ViewController: UITableViewController {
 }
 ```
 
-##Documentation
+## Documentation
 
 Documentation is on [CocoaDocs](http://cocoadocs.org/docsets/DatePickerCell).
