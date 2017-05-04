@@ -2,6 +2,9 @@
 
 📅 Inline/Expanding date picker for table views.
 
+[![CocoaPods](https://img.shields.io/cocoapods/v/DatePickerCell.svg?style=flat-square)](https://cocoapods.org/pods/DatePickerCell)
+[![license](https://img.shields.io/github/license/DylanVann/DatePickerCell.svg?style=flat-square)](https://github.com/DylanVann/DatePickerCell/blob/master/LICENSE)
+
 <p align="center">
     <img src="http://i.imgur.com/dpHIzw8.gif"/>
     <br>
