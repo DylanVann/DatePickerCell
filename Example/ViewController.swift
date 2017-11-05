@@ -19,7 +19,7 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // Get the correct height if the cell is a DatePickerCell.
-        let cell = self.tableView.cellForRow(at: indexPath)
+        let cell = cells[indexPath.section][indexPath.row]
         if (cell is DatePickerCell) {
             return (cell as! DatePickerCell).datePickerHeight()
         }
