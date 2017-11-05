@@ -347,9 +347,10 @@ open class DatePickerCell: UITableViewCell {
     }
     
     // Action for the datePicker ValueChanged event.
-    func datePicked() {
+    @objc func datePicked() {
         date = datePicker.date
         // date picked, call delegate method
         self.delegate?.datePickerCell?(self, didPickDate: date)
     }
 }
+
