@@ -97,7 +97,7 @@ open class DatePickerCell: UITableViewCell {
     
     - returns: An initialized DatePickerCell object or nil if the object could not be created.
     */
-    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
                 
         setup()
@@ -122,37 +122,37 @@ open class DatePickerCell: UITableViewCell {
         datePickerContainer.addConstraints([
             NSLayoutConstraint(
                 item: seperator,
-                attribute: NSLayoutAttribute.left,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.left,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: datePickerContainer,
-                attribute: NSLayoutAttribute.left,
+                attribute: NSLayoutConstraint.Attribute.left,
                 multiplier: 1.0,
                 constant: 0
             ),
             NSLayoutConstraint(
                 item: seperator,
-                attribute: NSLayoutAttribute.right,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.right,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: datePickerContainer,
-                attribute: NSLayoutAttribute.right,
+                attribute: NSLayoutConstraint.Attribute.right,
                 multiplier: 1.0,
                 constant: 0
             ),
             NSLayoutConstraint(
                 item: seperator,
-                attribute: NSLayoutAttribute.height,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.height,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: nil,
-                attribute: NSLayoutAttribute.notAnAttribute,
+                attribute: NSLayoutConstraint.Attribute.notAnAttribute,
                 multiplier: 1.0,
                 constant: 0.5
             ),
             NSLayoutConstraint(
                 item: seperator,
-                attribute: NSLayoutAttribute.top,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.top,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: datePickerContainer,
-                attribute: NSLayoutAttribute.top,
+                attribute: NSLayoutConstraint.Attribute.top,
                 multiplier: 1.0,
                 constant: 0
             ),
@@ -165,28 +165,28 @@ open class DatePickerCell: UITableViewCell {
         self.contentView.addConstraints([
             NSLayoutConstraint(
                 item: leftLabel,
-                attribute: NSLayoutAttribute.height,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.height,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: nil,
-                attribute: NSLayoutAttribute.notAnAttribute,
+                attribute: NSLayoutConstraint.Attribute.notAnAttribute,
                 multiplier: 1.0,
                 constant: 44
             ),
             NSLayoutConstraint(
                 item: leftLabel,
-                attribute: NSLayoutAttribute.top,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.top,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: self.contentView,
-                attribute: NSLayoutAttribute.top,
+                attribute: NSLayoutConstraint.Attribute.top,
                 multiplier: 1.0,
                 constant: 0
             ),
             NSLayoutConstraint(
                 item: leftLabel,
-                attribute: NSLayoutAttribute.left,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.left,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: self.contentView,
-                attribute: NSLayoutAttribute.left,
+                attribute: NSLayoutConstraint.Attribute.left,
                 multiplier: 1.0,
                 constant: self.separatorInset.left
             ),
@@ -196,28 +196,28 @@ open class DatePickerCell: UITableViewCell {
         self.contentView.addConstraints([
             NSLayoutConstraint(
                 item: rightLabel,
-                attribute: NSLayoutAttribute.height,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.height,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: nil,
-                attribute: NSLayoutAttribute.notAnAttribute,
+                attribute: NSLayoutConstraint.Attribute.notAnAttribute,
                 multiplier: 1.0,
                 constant: 44
             ),
             NSLayoutConstraint(
                 item: rightLabel,
-                attribute: NSLayoutAttribute.top,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.top,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: self.contentView,
-                attribute: NSLayoutAttribute.top,
+                attribute: NSLayoutConstraint.Attribute.top,
                 multiplier: 1.0,
                 constant: 0
             ),
             NSLayoutConstraint(
                 item: rightLabel,
-                attribute: NSLayoutAttribute.right,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.right,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: self.contentView,
-                attribute: NSLayoutAttribute.right,
+                attribute: NSLayoutConstraint.Attribute.right,
                 multiplier: 1.0,
                 constant: -self.separatorInset.left
             ),
@@ -227,37 +227,37 @@ open class DatePickerCell: UITableViewCell {
         self.contentView.addConstraints([
             NSLayoutConstraint(
                 item: datePickerContainer,
-                attribute: NSLayoutAttribute.left,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.left,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: self.contentView,
-                attribute: NSLayoutAttribute.left,
+                attribute: NSLayoutConstraint.Attribute.left,
                 multiplier: 1.0,
                 constant: 0
             ),
             NSLayoutConstraint(
                 item: datePickerContainer,
-                attribute: NSLayoutAttribute.right,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.right,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: self.contentView,
-                attribute: NSLayoutAttribute.right,
+                attribute: NSLayoutConstraint.Attribute.right,
                 multiplier: 1.0,
                 constant: 0
             ),
             NSLayoutConstraint(
                 item: datePickerContainer,
-                attribute: NSLayoutAttribute.top,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.top,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: leftLabel,
-                attribute: NSLayoutAttribute.bottom,
+                attribute: NSLayoutConstraint.Attribute.bottom,
                 multiplier: 1.0,
                 constant: 0
             ),
             NSLayoutConstraint(
                 item: datePickerContainer,
-                attribute: NSLayoutAttribute.bottom,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.bottom,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: self.contentView,
-                attribute: NSLayoutAttribute.bottom,
+                attribute: NSLayoutConstraint.Attribute.bottom,
                 multiplier: 1.0,
                 constant: 1
             ),
@@ -267,34 +267,34 @@ open class DatePickerCell: UITableViewCell {
         datePickerContainer.addConstraints([
             NSLayoutConstraint(
                 item: datePicker,
-                attribute: NSLayoutAttribute.left,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.left,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: datePickerContainer,
-                attribute: NSLayoutAttribute.left,
+                attribute: NSLayoutConstraint.Attribute.left,
                 multiplier: 1.0,
                 constant: 0
             ),
             NSLayoutConstraint(
                 item: datePicker,
-                attribute: NSLayoutAttribute.right,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.right,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: datePickerContainer,
-                attribute: NSLayoutAttribute.right,
+                attribute: NSLayoutConstraint.Attribute.right,
                 multiplier: 1.0,
                 constant: 0
             ),
             NSLayoutConstraint(
                 item: datePicker,
-                attribute: NSLayoutAttribute.top,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.top,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: datePickerContainer,
-                attribute: NSLayoutAttribute.top,
+                attribute: NSLayoutConstraint.Attribute.top,
                 multiplier: 1.0,
                 constant: 0
             ),
             ])
         
-        datePicker.addTarget(self, action: #selector(DatePickerCell.datePicked), for: UIControlEvents.valueChanged)
+        datePicker.addTarget(self, action: #selector(DatePickerCell.datePicked), for: UIControl.Event.valueChanged)
          // Clear seconds.
         let timeIntervalSinceReferenceDateWithoutSeconds = floor(date.timeIntervalSinceReferenceDate / 60.0) * 60.0
         self.date = Date(timeIntervalSinceReferenceDate: timeIntervalSinceReferenceDateWithoutSeconds)
@@ -330,7 +330,7 @@ open class DatePickerCell: UITableViewCell {
     open func selectedInTableView(_ tableView: UITableView) {
         expanded = !expanded
         
-        UIView.transition(with: rightLabel, duration: 0.25, options:UIViewAnimationOptions.transitionCrossDissolve, animations: { () -> Void in
+        UIView.transition(with: rightLabel, duration: 0.25, options:UIView.AnimationOptions.transitionCrossDissolve, animations: { () -> Void in
                 self.rightLabel.textColor = self.expanded ? self.tintColor : self.rightLabelTextColor
         }, completion: nil)
         

@@ -7,12 +7,12 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         self.tableView = UITableView(frame: CGRect.zero, style: .grouped)
-        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.rowHeight = UITableView.automaticDimension
         // Removes extra separators.
         self.tableView.tableFooterView = UIView()
         
         // The DatePickerCell.
-        let datePickerCell = DatePickerCell(style: UITableViewCellStyle.default, reuseIdentifier: nil)
+        let datePickerCell = DatePickerCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: nil)
         // Cells is a 2D array containing sections and rows.
         cells = [[datePickerCell]]
     }
